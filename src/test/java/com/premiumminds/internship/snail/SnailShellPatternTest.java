@@ -16,22 +16,22 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 public class SnailShellPatternTest {
 
-  /**
-   * The corresponding implementations to test.
-   *
-   * If you want, you can make others :)
-   *
-   */
-  public SnailShellPatternTest() {
-  };
+	/**
+	 * The corresponding implementations to test.
+	 *
+	 * If you want, you can make others :)
+	 *
+	 */
+	public SnailShellPatternTest() {
+	};
 
-  @Test
-  public void ScreenLockinPatternTestFirst3Length2Test()
-      throws InterruptedException, ExecutionException, TimeoutException {
-    int[][] matrix = { { 1, 2, 3 }, { 8, 9, 4 }, { 7, 6, 5 } };
-    Future<int[]> count = new SnailShellPattern().getSnailShell(matrix);
-    int[] result = count.get(10, TimeUnit.SECONDS);
-    int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    assertArrayEquals(result, expected);
-  }
+	@Test
+	public void ScreenLockinPatternTestFirst3Length2Test()
+			throws InterruptedException, ExecutionException, TimeoutException {
+		int[][] matrix = { { 1, 2, 3 }, { 8, 9, 4 }, { 7, 6, 5 } };
+		Future<int[]> count = new SnailShellPattern().getSnailShell(matrix);
+		int[] result = count.get(10, TimeUnit.SECONDS);
+		int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		assertArrayEquals(result, expected);
+	}
 }
